@@ -1,0 +1,323 @@
+[
+  {
+    "name": "Inglaterra",
+    "code": "gb",
+    "el": "inglés",
+    "la": "inglesa",
+    "los": "ingleses",
+    "las": "inglesas"
+  },
+  {
+    "name": "España",
+    "code": "es",
+    "el": "español",
+    "la": "española",
+    "los": "españoles",
+    "las": "españolas"
+  },
+  {
+    "name": "Francia",
+    "code": "fr",
+    "el": "francés",
+    "la": "francesa",
+    "los": "franceses",
+    "las": "francesas"
+  },
+  {
+    "name": "Alemania",
+    "code": "de",
+    "el": "alemán",
+    "la": "alemana",
+    "los": "alemanes",
+    "las": "alemanas"
+  },
+  {
+    "name": "Italia",
+    "code": "it",
+    "el": "italiano",
+    "la": "italiana",
+    "los": "italianos",
+    "las": "italianas"
+  },
+  {
+    "name": "Portugal",
+    "code": "pt",
+    "el": "portugués",
+    "la": "portuguesa",
+    "los": "portugueses",
+    "las": "portuguesas"
+  },
+  {
+    "name": "Estados Unidos",
+    "code": "us",
+    "el": "estadounidense",
+    "la": "estadounidense",
+    "los": "estadounidenses",
+    "las": "estadounidenses"
+  },
+  {
+    "name": "México",
+    "code": "mx",
+    "el": "mexicano",
+    "la": "mexicana",
+    "los": "mexicanos",
+    "las": "mexicanas"
+  },
+  {
+    "name": "Argentina",
+    "code": "ar",
+    "el": "argentino",
+    "la": "argentina",
+    "los": "argentinos",
+    "las": "argentinas"
+  },
+  {
+    "name": "Brasil",
+    "code": "br",
+    "el": "brasileño",
+    "la": "brasileña",
+    "los": "brasileños",
+    "las": "brasileñas"
+  },
+  {
+    "name": "Canadá",
+    "code": "ca",
+    "el": "canadiense",
+    "la": "canadiense",
+    "los": "canadienses",
+    "las": "canadienses"
+  },
+  {
+    "name": "China",
+    "code": "cn",
+    "el": "chino",
+    "la": "china",
+    "los": "chinos",
+    "las": "chinas"
+  },
+  {
+    "name": "Japón",
+    "code": "jp",
+    "el": "japonés",
+    "la": "japonesa",
+    "los": "japoneses",
+    "las": "japonesas"
+  },
+  {
+    "name": "Corea del Sur",
+    "code": "kr",
+    "el": "coreano",
+    "la": "coreana",
+    "los": "coreanos",
+    "las": "coreanas"
+  },
+  {
+    "name": "India",
+    "code": "in",
+    "el": "indio",
+    "la": "india",
+    "los": "indios",
+    "las": "indias"
+  },
+  {
+    "name": "Rusia",
+    "code": "ru",
+    "el": "ruso",
+    "la": "rusa",
+    "los": "rusos",
+    "las": "rusas"
+  },
+  {
+    "name": "Australia",
+    "code": "au",
+    "el": "australiano",
+    "la": "australiana",
+    "los": "australianos",
+    "las": "australianas"
+  },
+  {
+    "name": "Países Bajos",
+    "code": "nl",
+    "el": "neerlandés",
+    "la": "neerlandesa",
+    "los": "neerlandeses",
+    "las": "neerlandesas"
+  },
+  {
+    "name": "Bélgica",
+    "code": "be",
+    "el": "belga",
+    "la": "belga",
+    "los": "belgas",
+    "las": "belgas"
+  },
+  {
+    "name": "Suiza",
+    "code": "ch",
+    "el": "suizo",
+    "la": "suiza",
+    "los": "suizos",
+    "las": "suizas"
+  },
+  {
+    "name": "Austria",
+    "code": "at",
+    "el": "austriaco",
+    "la": "austriaca",
+    "los": "austriacos",
+    "las": "austriacas"
+  },
+  {
+    "name": "Suecia",
+    "code": "se",
+    "el": "sueco",
+    "la": "sueca",
+    "los": "suecos",
+    "las": "suecas"
+  },
+  {
+    "name": "Noruega",
+    "code": "no",
+    "el": "noruego",
+    "la": "noruega",
+    "los": "noruegos",
+    "las": "noruegas"
+  },
+  {
+    "name": "Dinamarca",
+    "code": "dk",
+    "el": "danés",
+    "la": "danesa",
+    "los": "daneses",
+    "las": "danesas"
+  },
+  {
+    "name": "Finlandia",
+    "code": "fi",
+    "el": "finlandés",
+    "la": "finlandesa",
+    "los": "finlandeses",
+    "las": "finlandesas"
+  },
+  {
+    "name": "Polonia",
+    "code": "pl",
+    "el": "polaco",
+    "la": "polaca",
+    "los": "polacos",
+    "las": "polacas"
+  },
+  {
+    "name": "Grecia",
+    "code": "gr",
+    "el": "griego",
+    "la": "griega",
+    "los": "griegos",
+    "las": "griegas"
+  },
+  {
+    "name": "Turquía",
+    "code": "tr",
+    "el": "turco",
+    "la": "turca",
+    "los": "turcos",
+    "las": "turcas"
+  },
+  {
+    "name": "Egipto",
+    "code": "eg",
+    "el": "egipcio",
+    "la": "egipcia",
+    "los": "egipcios",
+    "las": "egipcias"
+  },
+  {
+    "name": "Marruecos",
+    "code": "ma",
+    "el": "marroquí",
+    "la": "marroquí",
+    "los": "marroquíes",
+    "las": "marroquíes"
+  },
+  {
+    "name": "Sudáfrica",
+    "code": "za",
+    "el": "sudafricano",
+    "la": "sudafricana",
+    "los": "sudafricanos",
+    "las": "sudafricanas"
+  },
+  {
+    "name": "Chile",
+    "code": "cl",
+    "el": "chileno",
+    "la": "chilena",
+    "los": "chilenos",
+    "las": "chilenas"
+  },
+  {
+    "name": "Colombia",
+    "code": "co",
+    "el": "colombiano",
+    "la": "colombiana",
+    "los": "colombianos",
+    "las": "colombianas"
+  },
+  {
+    "name": "Perú",
+    "code": "pe",
+    "el": "peruano",
+    "la": "peruana",
+    "los": "peruanos",
+    "las": "peruanas"
+  },
+  {
+    "name": "Venezuela",
+    "code": "ve",
+    "el": "venezolano",
+    "la": "venezolana",
+    "los": "venezolanos",
+    "las": "venezolanas"
+  },
+  {
+    "name": "Cuba",
+    "code": "cu",
+    "el": "cubano",
+    "la": "cubana",
+    "los": "cubanos",
+    "las": "cubanas"
+  },
+  {
+    "name": "Irlanda",
+    "code": "ie",
+    "el": "irlandés",
+    "la": "irlandesa",
+    "los": "irlandeses",
+    "las": "irlandesas"
+  },
+  {
+    "name": "Escocia",
+    "code": "gb-sct",
+    "el": "escocés",
+    "la": "escocesa",
+    "los": "escoceses",
+    "las": "escocesas"
+  },
+  {
+    "name": "Nueva Zelanda",
+    "code": "nz",
+    "el": "neozelandés",
+    "la": "neozelandesa",
+    "los": "neozelandeses",
+    "las": "neozelandesas"
+  },
+  {
+    "name": "Tailandia",
+    "code": "th",
+    "el": "tailandés",
+    "la": "tailandesa",
+    "los": "tailandeses",
+    "las": "tailandesas"
+  }
+]
+

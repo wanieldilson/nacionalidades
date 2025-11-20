@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Nacionalidades en Español</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .flag-container {
+            text-align: center;
+            padding: 30px 0 20px 0;
+        }
+        .flag-img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .country-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .gender-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+        .gender-btn {
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .gender-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .btn-el {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .btn-el:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+        .btn-la {
+            background-color: #2196F3;
+            border-color: #2196F3;
+        }
+        .btn-la:hover {
+            background-color: #0b7dda;
+            border-color: #0b7dda;
+        }
+        .btn-los {
+            background-color: #FF9800;
+            border-color: #FF9800;
+        }
+        .btn-los:hover {
+            background-color: #e68900;
+            border-color: #e68900;
+        }
+        .btn-las {
+            background-color: #E91E63;
+            border-color: #E91E63;
+        }
+        .btn-las:hover {
+            background-color: #c2185b;
+            border-color: #c2185b;
+        }
+        .result-display {
+            text-align: center;
+            padding: 20px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nationality-word {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .next-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: #673AB7;
+            border-color: #673AB7;
+            transition: all 0.3s ease;
+        }
+        .next-btn:hover {
+            background-color: #5e35b1;
+            border-color: #5e35b1;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div id="loading" class="loading">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+                <div id="content" style="display: none;">
+                    <div class="flag-container">
+                        <img id="flag" src="" alt="Bandera" class="flag-img">
+                    </div>
+                    <div class="country-name" id="countryName"></div>
+                    <div class="gender-buttons">
+                        <button class="btn btn-primary gender-btn btn-el" onclick="showNationality('el')">el</button>
+                        <button class="btn btn-primary gender-btn btn-la" onclick="showNationality('la')">la</button>
+                        <button class="btn btn-primary gender-btn btn-los" onclick="showNationality('los')">los</button>
+                        <button class="btn btn-primary gender-btn btn-las" onclick="showNationality('las')">las</button>
+                    </div>
+                    <div class="result-display">
+                        <div id="result" class="nationality-word"></div>
+                    </div>
+                    <div class="p-3">
+                        <button class="btn btn-primary next-btn" onclick="loadNewCountry()">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentCountry = null;
+
+        // Load a new random country
+        async function loadNewCountry() {
+            try {
+                document.getElementById('loading').style.display = 'block';
+                document.getElementById('content').style.display = 'none';
+                
+                const response = await fetch('/api/random-country');
+                currentCountry = await response.json();
+                
+                // Update flag
+                document.getElementById('flag').src = `https://flagcdn.com/w320/${currentCountry.code}.png`;
+                document.getElementById('flag').alt = `Bandera de ${currentCountry.name}`;
+                
+                // Update country name
+                document.getElementById('countryName').textContent = currentCountry.name;
+                
+                // Clear previous result
+                document.getElementById('result').textContent = '';
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } catch (error) {
+                console.error('Error loading country:', error);
+                alert('Error al cargar el país. Por favor, intenta de nuevo.');
+            }
+        }
+
+        // Show the nationality word for the selected gender
+        function showNationality(gender) {
+            if (currentCountry) {
+                const nationality = currentCountry[gender];
+                document.getElementById('result').textContent = nationality;
+            }
+        }
+
+        // Load initial country when page loads
+        window.addEventListener('DOMContentLoaded', loadNewCountry);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
